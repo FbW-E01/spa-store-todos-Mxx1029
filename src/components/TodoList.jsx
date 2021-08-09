@@ -1,7 +1,8 @@
 import './TodoList.css'
 import TodoListItem from './TodoListItem';
 import CreateTodo from './CreateTodo';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import { UserContext } from '../contexts/UserContext';
 
 const defaultTodos = [
     { id: 58477, user: 1, text: "Wash dishes", done: false },
@@ -10,8 +11,9 @@ const defaultTodos = [
 ];
 
 // NOTE: TodoList doesn't even use "user", it just passes it
-function TodoList({ user }) {
+function TodoList() {
     const [todos, setTodos] = useState(defaultTodos);
+    const { user } = useContext(UserContext);
 
     function deleteTodo(todo) {
         const newTodos = todos.filter(f => f.id !== todo.id);
