@@ -1,0 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+html, body {margin: 0; padding: 0;}
+body {
+  background: linear-gradient(to bottom left, #0ff, #00f);
+  min-height: 100vh;
+}
