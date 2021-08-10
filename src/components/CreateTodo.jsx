@@ -19,7 +19,7 @@ class CreateTodo extends React.Component {
 
         this.props.createTodo({
             id: Math.ceil(Math.random() * 99999999),
-            user: this.props.user.id,
+            user: 1,
             text: this.state.todoText,
             done: false
         });
