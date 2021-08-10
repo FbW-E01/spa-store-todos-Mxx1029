@@ -2,12 +2,11 @@ import { useContext } from 'react';
 import { UserContext } from '../contexts/UserContext';
 
 
-function TodoListItem({ todo, deleteTodo} ) {
-
+function TodoListItem({ todo, deleteTodo } ) {
     const { user } = useContext(UserContext);
-
     const mine = todo.user === user.id
-    return(
+
+    return (
         <li className={mine ? "my-todo" : ""}>
             {todo.done ? "✓ " : "○ "}
             {todo.text}
